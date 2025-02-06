@@ -45,9 +45,9 @@ const ContactForm = ({ addContact, currentContact }) => {
   return (
     <form
       onSubmit={handleSubmit}
-      className="bg-white p-6 rounded-lg shadow-lg max-w-md mx-auto"
+      className="bg-white p-8 rounded-lg shadow-lg max-w-md mx-auto"
     >
-      <h2 className="text-2xl font-bold mb-4">
+      <h2 className="text-2xl font-bold mb-6 text-gray-800">
         {currentContact ? "Edit Contact" : "Add Contact"}
       </h2>
       <input
@@ -56,7 +56,7 @@ const ContactForm = ({ addContact, currentContact }) => {
         value={contact.name}
         onChange={handleChange}
         placeholder="Name"
-        className="w-full p-2 mb-4 border rounded-lg"
+        className="w-full p-3 mb-4 border rounded-lg focus:border-blue-500"
         required
       />
       <input
@@ -65,7 +65,7 @@ const ContactForm = ({ addContact, currentContact }) => {
         value={contact.phone}
         onChange={handleChange}
         placeholder="Phone"
-        className="w-full p-2 mb-4 border rounded-lg"
+        className="w-full p-3 mb-4 border rounded-lg focus:border-blue-500"
         required
       />
       <input
@@ -74,7 +74,7 @@ const ContactForm = ({ addContact, currentContact }) => {
         value={contact.email}
         onChange={handleChange}
         placeholder="Email"
-        className="w-full p-2 mb-4 border rounded-lg"
+        className="w-full p-3 mb-4 border rounded-lg focus:border-blue-500"
         required
       />
       <div className="mb-4">
@@ -92,7 +92,7 @@ const ContactForm = ({ addContact, currentContact }) => {
       </div>
       <button
         type="submit"
-        className="w-full bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600"
+        className="w-full bg-blue-600 text-white py-3 px-4 rounded-lg hover:bg-blue-700"
       >
         {currentContact ? "Update Contact" : "Add Contact"}
       </button>

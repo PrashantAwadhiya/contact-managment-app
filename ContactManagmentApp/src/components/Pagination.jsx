@@ -7,9 +7,9 @@ const Pagination = ({ currentPage, totalPages, setPage }) => {
         <button
           key={index}
           onClick={() => setPage(index + 1)}
-          className={`mx-2 px-4 py-2 rounded-lg ${
+          className={`mx-2 px-4 py-2 rounded-lg shadow-md ${
             index + 1 === currentPage
-              ? "bg-blue-500 text-white"
+              ? "bg-blue-600 text-white"
               : "bg-gray-200 text-gray-700 hover:bg-gray-300"
           }`}
         >
