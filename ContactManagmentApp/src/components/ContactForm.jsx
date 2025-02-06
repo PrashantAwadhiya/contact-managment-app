@@ -10,7 +10,6 @@ const ContactForm = ({ addContact, currentContact }) => {
   });
   const [uploading, setUploading] = useState(false);
 
-
   useEffect(() => {
     if (currentContact) {
       setContact(currentContact);
@@ -45,38 +44,40 @@ const ContactForm = ({ addContact, currentContact }) => {
   return (
     <form
       onSubmit={handleSubmit}
-      className="bg-white p-8 rounded-lg shadow-lg max-w-md mx-auto"
+      className=" p-8 rounded-lg shadow-lg max-w-md mx-auto mt-8 space-y-6 "
     >
-      <h2 className="text-2xl font-bold mb-6 text-gray-800">
+      <h2 className="text-3xl font-bold mb-6 text-gray-800 text-center">
         {currentContact ? "Edit Contact" : "Add Contact"}
       </h2>
-      <input
-        type="text"
-        name="name"
-        value={contact.name}
-        onChange={handleChange}
-        placeholder="Name"
-        className="w-full p-3 mb-4 border rounded-lg focus:border-blue-500"
-        required
-      />
-      <input
-        type="text"
-        name="phone"
-        value={contact.phone}
-        onChange={handleChange}
-        placeholder="Phone"
-        className="w-full p-3 mb-4 border rounded-lg focus:border-blue-500"
-        required
-      />
-      <input
-        type="email"
-        name="email"
-        value={contact.email}
-        onChange={handleChange}
-        placeholder="Email"
-        className="w-full p-3 mb-4 border rounded-lg focus:border-blue-500"
-        required
-      />
+      <div className="space-y-4">
+        <input
+          type="text"
+          name="name"
+          value={contact.name}
+          onChange={handleChange}
+          placeholder="Name"
+          className="w-full p-3 border rounded-lg focus:border-blue-500"
+          required
+        />
+        <input
+          type="text"
+          name="phone"
+          value={contact.phone}
+          onChange={handleChange}
+          placeholder="Phone"
+          className="w-full p-3 border rounded-lg focus:border-blue-500"
+          required
+        />
+        <input
+          type="email"
+          name="email"
+          value={contact.email}
+          onChange={handleChange}
+          placeholder="Email"
+          className="w-full p-3 border rounded-lg focus:border-blue-500"
+          required
+        />
+      </div>
       <div className="mb-4">
         <label className="block mb-2 text-gray-600">Upload Photo:</label>
         <input
@@ -92,7 +93,7 @@ const ContactForm = ({ addContact, currentContact }) => {
       </div>
       <button
         type="submit"
-        className="w-full bg-blue-600 text-white py-3 px-4 rounded-lg hover:bg-blue-700"
+        className="w-full bg-blue-600 text-white py-3 px-4 rounded-lg hover:bg-blue-700 transition duration-300"
       >
         {currentContact ? "Update Contact" : "Add Contact"}
       </button>
